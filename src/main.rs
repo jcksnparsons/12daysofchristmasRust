@@ -34,17 +34,8 @@ fn main() {
 
         let slice = &christmas_carol_response[0..i + 1];
 
-        match i {
-            1 => {
-                for j in slice {
-                    println!("{}", j)
-                }
-            }
-            _ => {
-                for j in slice {
-                    println!("{}", j)
-                }
-            }
+        for j in slice {
+            println!("{}", j)
         }
     }
 }
