@@ -1,17 +1,17 @@
 fn main() {
     let christmas_carol_response: [&str; 12] = [
-        "twelve drummers drumming",
-        "eleven pipers piping",
-        "ten lords-a leaping",
-        "nine ladies dancing",
-        "eight mades a-milking",
-        "seven swans a-swimming",
-        "six geese a-laying",
-        "FIVE GOLDEN RINGS!",
-        "four calling birds",
-        "three french hens",
-        "two turtle doves and",
         "a patridge in a pear tree",
+        "two turtle doves and",
+        "three french hens",
+        "four calling birds",
+        "FIVE GOLDEN RINGS!",
+        "six geese a-laying",
+        "seven swans a-swimming",
+        "eight mades a milking",
+        "nine ladies dancing",
+        "ten lords-a leaping",
+        "eleven pipers piping",
+        "twelve drummers drumming",
     ];
 
     let christmas_carol_call: [&str; 12] = [
@@ -29,10 +29,22 @@ fn main() {
         "On the twelfth day of Christmas, my true love gave to me:",
     ];
 
-    for i in christmas_carol_call.iter() {
-        println!("{}", i);
-        for j in christmas_carol_response.iter() {
-            println!("{}", j)
+    for i in 0..christmas_carol_call.len() {
+        println!("{}", christmas_carol_call[i]);
+
+        let slice = &christmas_carol_response[0..i + 1];
+
+        match i {
+            1 => {
+                for j in slice {
+                    println!("{}", j)
+                }
+            }
+            _ => {
+                for j in slice {
+                    println!("{}", j)
+                }
+            }
         }
     }
 }
