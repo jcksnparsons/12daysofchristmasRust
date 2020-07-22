@@ -1,5 +1,5 @@
 fn main() {
-    let christmas_carol_response: [&str; 12] = [
+    let mut christmas_carol_response: [&str; 12] = [
         "a patridge in a pear tree",
         "two turtle doves and",
         "three french hens",
@@ -13,6 +13,8 @@ fn main() {
         "eleven pipers piping",
         "twelve drummers drumming",
     ];
+
+    christmas_carol_response.reverse();
 
     let christmas_carol_call: [&str; 12] = [
         "On the first day of Christmas, my true love gave to me:",
@@ -32,7 +34,9 @@ fn main() {
     for i in 0..christmas_carol_call.len() {
         println!("{}", christmas_carol_call[i]);
 
-        let slice = &christmas_carol_response[0..i + 1];
+        let copy = &christmas_carol_response;
+
+        let slice = &copy[0..i + 1];
 
         for j in slice {
             println!("{}", j)
