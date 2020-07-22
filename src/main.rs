@@ -1,5 +1,5 @@
 fn main() {
-    let mut christmas_carol_response: [&str; 12] = [
+    let christmas_carol_response: [&str; 12] = [
         "a patridge in a pear tree",
         "two turtle doves and",
         "three french hens",
@@ -13,8 +13,6 @@ fn main() {
         "eleven pipers piping",
         "twelve drummers drumming",
     ];
-
-    christmas_carol_response.reverse();
 
     let christmas_carol_call: [&str; 12] = [
         "On the first day of Christmas, my true love gave to me:",
